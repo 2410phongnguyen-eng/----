@@ -512,13 +512,13 @@ Cd3PO42:{f:"Cd₃(PO₄)₂",n:"Cadimi photphat",c:"salt"},
 Co3PO42:{f:"Co₃(PO₄)₂",n:"Coban(II) photphat",c:"salt"},
 //==================== KHÍ ĐẶC BIỆT ====================
 
-O3:{f:"O₃",n:"Ozon",c:"gas"},
-ClO2:{f:"ClO₂",n:"Clo đioxit",c:"gas"},
-N2O:{f:"N₂O",n:"Khí cười",c:"gas"},
-NH2OH:{f:"NH₂OH",n:"Hiđroxylamin",c:"compound"},
-PH3:{f:"PH₃",n:"Photphin",c:"gas"},
-SiH4:{f:"SiH₄",n:"Silan",c:"gas"},
-B2H6:{f:"B₂H₆",n:"Điboran",c:"gas"},
+O3:{f:"O₃",n:"Ozon",c:"element"},
+ClO2:{f:"ClO₂",n:"Clo đioxit",c:"other"},
+
+NH2OH:{f:"NH₂OH",n:"Hiđroxylamin",c:"other"},
+PH3:{f:"PH₃",n:"Photphin",c:"other"},
+SiH4:{f:"SiH₄",n:"Silan",c:"other"},
+B2H6:{f:"B₂H₆",n:"Điboran",c:"other"},
 
 //==================== PEROXIT ====================
 
@@ -556,22 +556,19 @@ B2O3:{f:"B₂O₃",n:"Bo oxit",c:"oxide"},
 
 //==================== HỢP CHẤT SILIC ====================
 
-SiC:{f:"SiC",n:"Silic cacbua",c:"compound"},
-Si3N4:{f:"Si₃N₄",n:"Silic nitrua",c:"compound"},
-SiCl4:{f:"SiCl₄",n:"Silic tetraclorua",c:"compound"},
+SiC:{f:"SiC",n:"Silic cacbua",c:"salt"},
+Si3N4:{f:"Si₃N₄",n:"Silic nitrua",c:"salt"},
+SiCl4:{f:"SiCl₄",n:"Silic tetraclorua",c:"salt"},
 
 //==================== CACBUA ====================
 
-CaC2:{f:"CaC₂",n:"Canxi cacbua",c:"compound"},
-Al4C3:{f:"Al₄C₃",n:"Nhôm cacbua",c:"compound"},
-WC:{f:"WC",n:"Vonfram cacbua",c:"compound"},
-TiC:{f:"TiC",n:"Titan cacbua",c:"compound"},
+TiC:{f:"TiC",n:"Titan cacbua",c:"salt"},
 
 //==================== NITRUA ====================
 
-BN:{f:"BN",n:"Bo nitrua",c:"compound"},
-AlN:{f:"AlN",n:"Nhôm nitrua",c:"compound"},
-Mg3N2:{f:"Mg₃N₂",n:"Magie nitrua",c:"compound"},
+BN:{f:"BN",n:"Bo nitrua",c:"salt"},
+AlN:{f:"AlN",n:"Nhôm nitrua",c:"salt"},
+Mg3N2:{f:"Mg₃N₂",n:"Magie nitrua",c:"salt"},
 
 //==================== SUNFUA MỚI ====================
 
@@ -590,7 +587,6 @@ CaH2:{f:"CaH₂",n:"Canxi hydrua",c:"other"}
    eq: full display equation
    ========================================================= */
 const R = [
-  {r:["O2","O2"],p:["O3"],cond:"tia lửa điện",eq:"3O₂ → 2O₃"},
 
 {r:["Na2SO3","S"],p:["Na2S2O3"],cond:"",eq:"Na₂SO₃ + S → Na₂S₂O₃"},
 
