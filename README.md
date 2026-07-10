@@ -269,6 +269,7 @@ NH3H2O:{f:"NH<sub>3</sub>·H<sub>2</sub>O",n:"Amoniac (dd)",c:"base"},
 HCl:{f:"HCl",n:"Axit clohiđric",c:"acid"},
 "H2SO4 loãng":{f:"H<sub>2</sub>SO<sub>4</sub> loãng",n:"Axit sunfuric loãng",c:"acid"},
 "H2SO4 đặc":{f:"H<sub>2</sub>SO<sub>4</sub> đặc",n:"Axit sunfuric đặc",c:"acid"},
+"H2SO4.nSO3":{f:"H<sub>2</sub>SO<sub>4</sub>.nSO<sub>3</sub>",n:"Oleum",c:"other"},
 H2S2O8:{f:"H<sub>2</sub>S<sub>2</sub>O<sub>8</sub>",n:"Axit peroxydisulfuric",c:"acid"},
 
 H2SO3:{f:"H<sub>2</sub>SO<sub>3</sub>",n:"Axit sunfurơ",c:"acid"}, HNO3:{f:"HNO<sub>3</sub>",n:"Axit nitric",c:"acid"},
