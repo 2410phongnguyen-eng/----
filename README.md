@@ -182,25 +182,25 @@ footer b{color:var(--phos);}
    c: category -> element | oxide | base | acid | salt | organic | other
    ========================================================= */
 const S = {
-  Li:{f:"Li",n:"Liti",c:"element"},
-Be:{f:"Be",n:"Berili",c:"element"},
-Sr:{f:"Sr",n:"Stronti",c:"element"},
-Cd:{f:"Cd",n:"Cadimi",c:"element"},
-Co:{f:"Co",n:"Coban",c:"element"},
+
 
 Na:{f:"Na",n:"Natri",c:"element"}, K:{f:"K",n:"Kali",c:"element"}, Ca:{f:"Ca",n:"Canxi",c:"element"},
 Ba:{f:"Ba",n:"Bari",c:"element"}, Mg:{f:"Mg",n:"Magie",c:"element"}, Al:{f:"Al",n:"Nhôm",c:"element"},
 Zn:{f:"Zn",n:"Kẽm",c:"element"}, Fe:{f:"Fe",n:"Sắt",c:"element"}, Ni:{f:"Ni",n:"Niken",c:"element"},
 Sn:{f:"Sn",n:"Thiếc",c:"element"}, Pb:{f:"Pb",n:"Chì",c:"element"}, Cu:{f:"Cu",n:"Đồng",c:"element"},
 Ag:{f:"Ag",n:"Bạc",c:"element"}, Hg:{f:"Hg",n:"Thủy ngân",c:"element"}, Au:{f:"Au",n:"Vàng",c:"element"},
-H2:{f:"H<sub>2</sub>",n:"Hiđro",c:"element"}, O2:{f:"O<sub>2</sub>",n:"Oxi",c:"element"}, N2:{f:"N<sub>2</sub>",n:"Nitơ",c:"element"},
+H2:{f:"H<sub>2</sub>",n:"Hiđro",c:"element"},O3:{f:"O₃",n:"Ozon",c:"element"}, O2:{f:"O<sub>2</sub>",n:"Oxi",c:"element"}, N2:{f:"N<sub>2</sub>",n:"Nitơ",c:"element"},
 Cl2:{f:"Cl<sub>2</sub>",n:"Clo",c:"element"}, Br2:{f:"Br<sub>2</sub>",n:"Brom",c:"element"}, I2:{f:"I<sub>2</sub>",n:"Iot",c:"element"},
 F2:{f:"F<sub>2</sub>",n:"Flo",c:"element"}, S:{f:"S",n:"Lưu huỳnh",c:"element"}, C:{f:"C",n:"Cacbon",c:"element"},
 P:{f:"P",n:"Photpho",c:"element"},
  Si:{f:"Si",n:"Silic",c:"element"},
 Mn:{f:"Mn",n:"Mangan",c:"element"},
 Cr:{f:"Cr",n:"Crôm",c:"element"},
-
+  Li:{f:"Li",n:"Liti",c:"element"},
+Be:{f:"Be",n:"Berili",c:"element"},
+Sr:{f:"Sr",n:"Stronti",c:"element"},
+Cd:{f:"Cd",n:"Cadimi",c:"element"},
+Co:{f:"Co",n:"Coban",c:"element"},
 Li2O:{f:"Li₂O",n:"Liti oxit",c:"oxide"},
 BeO:{f:"BeO",n:"Berili oxit",c:"oxide"},
 SrO:{f:"SrO",n:"Stronti oxit",c:"oxide"},
@@ -513,7 +513,7 @@ Cd3PO42:{f:"Cd₃(PO₄)₂",n:"Cadimi photphat",c:"salt"},
 Co3PO42:{f:"Co₃(PO₄)₂",n:"Coban(II) photphat",c:"salt"},
 //==================== KHÍ ĐẶC BIỆT ====================
 
-O3:{f:"O₃",n:"Ozon",c:"element"},
+
 ClO2:{f:"ClO₂",n:"Clo đioxit",c:"other"},
 
 NH2OH:{f:"NH₂OH",n:"Hiđroxylamin",c:"other"},
