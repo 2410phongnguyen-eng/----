@@ -947,9 +947,14 @@ const R = [
 {r:["Br2","H2O"],p:["HBr","HBrO"],cond:"",eq:"Br₂ + H₂O ⇌ HBr + HBrO"},
 
 {r:["CaO2","H2O"],p:["CaOH2","H2O2"],cond:"0°C",eq:"CaO₂ + H₂O → Ca(OH)₂ + H₂O₂"},
-{r:["BaO2","H2O"],p:["BaOH2","H2O2"],cond:"0°C",eq:"BaO₂ + H₂O → Ba(OH)₂ + H₂O₂"},
+{r:["BaO2","H2O"],p:["BaOH2","H2O2"],cond:"0°C",eq:"BaO₂ a+ H₂O → Ba(OH)₂ + H₂O₂"},
 {r:["K2O2","H2O"],p:["KOH","H2O2"],cond:"0°C",eq:"K₂O₂ + H₂O → 2KOH + H₂O₂"},
 {r:["NaO2","H2O"],p:["NaOH","H2O2"],cond:"0°C",eq:"NaO₂ + H₂O → NaOH + H₂O₂"},
+
+  {r:["NaH","H2O"],p:["NaOH","H2O"],cond:"0°C",eq:"NaH + H₂O → NaOH + H₂"},
+  {r:["KH","H2O"],p:["KOH","H2O"],cond:"0°C",eq:"KH + H₂O → KOH + H₂"},
+  {r:["CaH2","H2O"],p:["CaOH2","H2O"],cond:"0°C",eq:"CaH₂ + H₂O → CaOH + H₂"},
+   {r:["BaH2","H2O"],p:["BaOH2","H2O"],cond:"0°C",eq:"BaH₂ + H₂O → BaOH + H₂"},
 // --- nitơ / amoniac ---
 {r:["N2","H2"],p:["NH3"],cond:"t°, p, xt Fe",eq:"N₂ + 3H₂ ⇌ 2NH₃"},
 {r:["N2","O2"],p:["NO"],cond:"tia lửa điện / 3000°C",eq:"N₂ + O₂ → 2NO"},
