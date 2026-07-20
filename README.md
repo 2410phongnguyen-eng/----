@@ -145,12 +145,14 @@
 html,body{margin:0;padding:0;}
 body{
   background:
-    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(102,255,178,0.06), transparent 60%),
-    radial-gradient(ellipse 700px 500px at 100% 0%, rgba(184,146,255,0.05), transparent 55%),
-    var(--bg);
+      radial-gradient(circle at top left,
+      rgba(176,43,39,.12), transparent 45%),
+      radial-gradient(circle at bottom right,
+      rgba(209,155,69,.12), transparent 40%),
+      var(--bg);
+
   color:var(--ink);
   font-family:'Space Grotesk',sans-serif;
-  min-height:100vh;
 }
 ::selection{background:var(--phos-dim);}
 .wrap{max-width:1400px;margin:0 auto;padding:20px 22px 60px;}
@@ -186,7 +188,8 @@ h1 span{color:var(--phos);}
 .tiles::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
 
 .tile{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 6px;text-align:center;cursor:pointer;transition:.12s;position:relative;overflow:hidden;}
-.tile:hover{transform:translateY(-2px);border-color:var(--phos);box-shadow:0 4px 14px rgba(102,255,178,0.12);}
+.tile:hover{transform:translateY(-2px);  border-color:#b02b27;
+    box-shadow:0 6px 18px rgba(176,43,39,.18)}
 .tile .f{font-family:'JetBrains Mono',monospace;font-size:.86rem;font-weight:700;display:block;}
 .tile .n{font-size:.6rem;color:var(--dim);display:block;margin-top:2px;line-height:1.15;}
 .tile .catbar{position:absolute;top:0;left:0;right:0;height:3px;}
@@ -195,32 +198,50 @@ h1 span{color:var(--phos);}
 .locked:hover{transform:none;box-shadow:none;border-color:var(--line);}
 
 /* category colors */
-.c-element .catbar{background:var(--cyan);} .c-element .f{color:var(--cyan);}
+.c-element .catbar{background:#a65c39;}
+.c-element .f{color:#a65c39;}
 .c-oxide .catbar{background:var(--amber);} .c-oxide .f{color:var(--amber);}
-.c-base .catbar{background:#7ab8ff;} .c-base .f{color:#7ab8ff;}
+.c-base .catbar{background:#b02b27;}
+.c-base .f{color:#b02b27;}
 .c-acid .catbar{background:var(--red);} .c-acid .f{color:var(--red);}
 .c-salt .catbar{background:var(--sand);} .c-salt .f{color:var(--sand);}
 .c-organic .catbar{background:var(--violet);} .c-organic .f{color:var(--violet);}
 .c-other .catbar{background:var(--slate);} .c-other .f{color:var(--slate);}
 
 /* flask panel */
-.flaskzone{min-height:110px;border:1px dashed var(--line);border-radius:10px;padding:12px;display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;margin-bottom:12px;}
+.flaskzone{min-height:110px;      background:#fffaf5;  border:2px dashed #c8aa86;;border-radius:10px;padding:12px;display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;margin-bottom:12px;}
 .flaskzone.empty::before{content:"Chọn chất ở bên trái để thêm vào bình phản ứng…";color:var(--dim);font-size:.78rem;font-style:italic;}
 .chip{background:var(--panel2);border:1px solid var(--phos-dim);border-radius:20px;padding:6px 12px 6px 12px;font-family:'JetBrains Mono',monospace;font-size:.82rem;display:flex;align-items:center;gap:8px;cursor:pointer;}
 .chip:hover{border-color:var(--red);}
 .chip .x{color:var(--dim);font-size:.7rem;}
 
 .actions{display:flex;gap:10px;margin-bottom:16px;}
-.btn{flex:1;background:var(--phos);color:#03130a;border:none;border-radius:8px;padding:12px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;cursor:pointer;letter-spacing:.3px;transition:.15s;}
-.btn:hover{background:#8dffc4;}
+.btn{flex:1;    background:#b02b27;
+    color:#fffaf2;;border:none;border-radius:8px;padding:12px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;cursor:pointer;letter-spacing:.3px;transition:.15s;}
+.btn:hover{   background:#c53a35;}
 .btn:disabled{background:var(--line);color:var(--dim);cursor:not-allowed;}
 .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--dim);flex:0 0 auto;padding:12px 16px;}
 .btn.ghost:hover{border-color:var(--red);color:var(--red);}
 
 /* result / log */
 .result{border-radius:10px;padding:14px;margin-bottom:12px;font-family:'JetBrains Mono',monospace;}
-.result.ok{background:rgba(102,255,178,0.08);border:1px solid var(--phos-dim);}
-.result.no{background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.35);}
+.result.ok{
+    background:#fff4ef;
+    border:1px solid #c53a35;
+}
+
+.result.ok .eqline{
+    color:#b02b27;
+}
+
+.result.no{
+    background:#f9ece6;
+    border:1px solid #cf3c38;
+}
+
+.result.no .eqline{
+    color:#cf3c38;
+}
 .result .eqline{font-size:1.05rem;font-weight:700;color:var(--phos);margin-bottom:4px;word-break:break-word;}
 .result.no .eqline{color:var(--red);font-weight:400;font-style:italic;font-size:.85rem;}
 .result .cond{color:var(--amber);font-size:.72rem;}
@@ -250,11 +271,11 @@ footer b{color:var(--phos);}
 <header>
   <div class="brand">
     <svg class="flaskmark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <path d="M40 10 L60 10 L60 38 L82 78 Q86 86 76 86 L24 86 Q14 86 18 78 L40 38 Z" fill="none" stroke="#66ffb2" stroke-width="4"/>
-      <path d="M27 66 L73 66 L76 78 Q78 82 74 82 L26 82 Q22 82 24 78 Z" fill="#66ffb2" opacity="0.35"/>
-      <circle cx="50" cy="52" r="3" fill="#66ffb2"/>
-      <circle cx="42" cy="60" r="2" fill="#66ffb2"/>
-      <circle cx="58" cy="58" r="2.2" fill="#66ffb2"/>
+      <path d="M40 10 L60 10 L60 38 L82 78 Q86 86 76 86 L24 86 Q14 86 18 78 L40 38 Z" fill="none" stroke="#2b1a15" stroke-width="4"/>
+      <path d="M27 66 L73 66 L76 78 Q78 82 74 82 L26 82 Q22 82 24 78 Z" fill="#b02b27" opacity="0.35"/>
+      <circle cx="50" cy="52" r="3" fill="#b02b27"/>
+      <circle cx="42" cy="60" r="2" fill="#b02b27"/>
+      <circle cx="58" cy="58" r="2.2" fill="##b02b27"/>
     </svg>
     <div>
       <h1>Phòng Thí Nghiệm <span>Ghép Chất</span></h1>
@@ -283,7 +304,7 @@ footer b{color:var(--phos);}
       <h2>Bình phản ứng</h2>
       <div class="flaskzone empty" id="flask"></div>
       <div class="actions">
-        <button class="btn" id="reactBtn" disabled>⚗ Thực hiện phản ứng</button>
+        <button class="btn" id="reactBtn" disabled> Thực hiện phản ứng</button>
         <button class="btn ghost" id="clearBtn">Đổ bỏ</button>
       </div>
       <div id="resultArea"></div>
