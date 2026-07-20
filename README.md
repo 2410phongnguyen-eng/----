@@ -6,21 +6,140 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
+  .home-origin-btn{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:10px 18px;
+    margin-left:14px;
+
+    border:none;
+    border-radius:999px;
+
+    background:
+        linear-gradient(135deg,#b02b27,#8d221f);
+
+    color:#f7eed7;
+    cursor:pointer;
+
+    font-family:'Be Vietnam Pro',sans-serif;
+
+    box-shadow:
+        0 10px 24px rgba(156,42,37,.28),
+        inset 0 1px 0 rgba(255,255,255,.15);
+
+    transition:
+        transform .28s,
+        box-shadow .28s,
+        background .28s;
+}
+
+.home-origin-btn::before{
+    content:"";
+    position:absolute;
+    inset:2px;
+    border-radius:999px;
+    border:1px solid rgba(255,215,120,.45);
+    pointer-events:none;
+}
+
+.home-origin-btn:hover{
+    transform:translateY(-3px);
+    background:linear-gradient(135deg,#c53a35,#a42a25);
+    box-shadow:
+        0 16px 32px rgba(156,42,37,.4),
+        inset 0 1px 0 rgba(255,255,255,.2);
+}
+
+.home-origin-btn:active{
+    transform:scale(.96);
+}
+
+.btn-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        radial-gradient(circle,#e8c574,#a9832f);
+
+    color:#2d2118;
+    font-size:22px;
+
+    box-shadow:
+        inset 0 2px 5px rgba(255,255,255,.3),
+        0 5px 10px rgba(0,0,0,.18);
+}
+
+.btn-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+    text-align:left;
+}
+
+.btn-text small{
+    font-size:9px;
+    letter-spacing:.35em;
+    opacity:.75;
+    font-weight:700;
+}
+
+.btn-text strong{
+    font-size:15px;
+    font-weight:700;
+    font-family:'Cormorant Garamond',serif;
+    letter-spacing:.05em;
+}
+
+@media(max-width:768px){
+
+    .home-origin-btn{
+        padding:10px;
+        border-radius:50%;
+        width:52px;
+        height:52px;
+        justify-content:center;
+        margin-left:8px;
+    }
+
+    .btn-text{
+        display:none;
+    }
+
+    .btn-icon{
+        width:36px;
+        height:36px;
+        font-size:20px;
+    }
+}
 :root{
-  --bg:#0a0f0d;
-  --panel:#111a16;
-  --panel2:#0d1512;
-  --line:#1e2f27;
-  --ink:#dfeee6;
-  --dim:#7f9c8f;
-  --phos:#66ffb2;
-  --phos-dim:#2c6b4f;
-  --amber:#ffb454;
-  --red:#ff6b6b;
-  --violet:#b892ff;
-  --cyan:#6bd6ff;
-  --slate:#8fa5ba;
-  --sand:#e0c288;
+  /* Màu nền */
+  --bg:#f6efe2;          /* nền be */
+  --panel:#fffaf2;       /* panel sáng */
+  --panel2:#f4ead8;      /* panel phụ */
+  --line:#d9c6a6;        /* đường viền */
+
+  /* Chữ */
+  --ink:#3a2418;         /* nâu đậm */
+  --dim:#8b6b56;         /* nâu nhạt */
+
+  /* Màu chủ đạo */
+  --phos:#b02b27;        /* đỏ KOIFISH */
+  --phos-dim:#f6efe6;    /* đỏ đậm */
+
+  /* Các màu phụ */
+  --amber:#d19b45;       /* vàng be */
+  --red:#cf3c38;
+  --violet:#8d4d79;
+  --cyan:#8f5b46;
+  --slate:#8b7566;
+  --sand:#d7b987;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
@@ -117,6 +236,15 @@ footer b{color:var(--phos);}
 </style>
 </head>
 <body>
+  <header class="topbar"> 
+    <button class="home-origin-btn" onclick="window.location.href='https://2410phongnguyen-eng.github.io/Koi/'">
+    <span class="btn-icon">🏯</span>
+    <span class="btn-text">
+        <small>TRANG CHỦ</small>
+        <strong>Nishiki Hub</strong>
+    </span>
+</button>
+  </header>
 <div class="wrap">
 
 <header>
