@@ -66,7 +66,7 @@
     justify-content:center;
 
     background:
-        radial-gradient(circle,#e8c574,#a9832f);
+        radial-gradient(circle,#e8c574,#e5c88c);
 
     color:#2d2118;
     font-size:22px;
