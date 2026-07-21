@@ -1663,24 +1663,17 @@ renderFlask();
 updateStats();
 </script>
 <script>
-// Danh sách các link được phép hiển thị
-const allowedLinks = [
-  
-];
+const blockedLink = "[https://example.com](https://2410phongnguyen-eng.github.io/KOILABORATORY/)";
 
-// Duyệt tất cả thẻ <a>
-document.querySelectorAll("a").forEach(link => {
-    const href = link.href;
-
-    const allowed = allowedLinks.some(url => href.startsWith(url));
-
-    if (!allowed) {
-        // Xóa hoàn toàn khỏi trang
-        link.remove();
-
-        // Hoặc nếu chỉ muốn ẩn thì thay bằng:
-        // link.style.display = "none";
-    }
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("a").forEach(link => {
+        if (
+            link.href === blockedLink ||
+            link.href.startsWith(blockedLink)
+        ) {
+            link.remove(); // Xóa hoàn toàn khỏi trang
+        }
+    });
 });
 </script>
 </body>
