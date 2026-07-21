@@ -1663,7 +1663,7 @@ renderFlask();
 updateStats();
 </script>
 <script>
-const blockedLink = "[https://example.com](https://2410phongnguyen-eng.github.io/KOILABORATORY/)";
+const blockedLink = "https://2410phongnguyen-eng.github.io/KOILABORATORY/";
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("a").forEach(link => {
